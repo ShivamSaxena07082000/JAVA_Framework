@@ -29,6 +29,10 @@ public class RegistrationPage extends BasePage {
     private WebElement  passwordInput;
     @FindBy(xpath = "//input[@name='confirm']")
     private WebElement  confirmInput;
+
+    @FindBy(xpath="//input[@name='agree']")
+    private WebElement privacyPolicy;
+
     @FindBy(xpath = "//input[@value='Continue']")
     private WebElement submitButton;
 
@@ -59,8 +63,15 @@ public class RegistrationPage extends BasePage {
     {
         confirmInput.sendKeys(confirmPassword);
     }
+
+    public void checkPrivacyPolicy()
+    {
+        privacyPolicy.click();
+    }
+
     public void clickSubmitButton(){
         submitButton.click();
+
     }
 
 

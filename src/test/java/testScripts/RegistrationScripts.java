@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import pageClasses.HomePage;
 import pageClasses.RegistrationPage;
 
+import java.time.Duration;
+
 public class RegistrationScripts extends BaseTest {
 
     @Test
@@ -21,6 +23,7 @@ public class RegistrationScripts extends BaseTest {
         registerobj.setTelephoneInput("9876543210");
         registerobj.setPasswordInput("Password123");
         registerobj.setConfirmInput("Password123");
+        registerobj.checkPrivacyPolicy();
         registerobj.clickSubmitButton();
 
     }

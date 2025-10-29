@@ -21,10 +21,10 @@ public class BaseTest {
         driver.manage().window().maximize();
     }
 
-    @AfterClass
-    public void tearDown() {
+    //@AfterClass
+   // public void tearDown() {
         // Code to close the browser and cleanup
-        driver.quit();
+      //  driver.quit();
 
-    }
+    //}
 }
