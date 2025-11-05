@@ -12,8 +12,12 @@ public class RegistrationScripts extends BaseTest {
     @Test
     public void registrationTest() {
         // Code to perform registration test
+
+        logger.info("Doing a Registration");
         HomePage homePageObj = new HomePage(driver);
+        logger.debug("Click on MyAccount Tab");
         homePageObj.clickonMyAccountTab();
+        logger.debug("Click on Register Link");
         homePageObj.clickonRegisterLink();
 
         RegistrationPage registerobj = new RegistrationPage(driver);
@@ -24,7 +28,10 @@ public class RegistrationScripts extends BaseTest {
         registerobj.setPasswordInput("Password123");
         registerobj.setConfirmInput("Password123");
         registerobj.checkPrivacyPolicy();
+
+        logger.info("Entered all the details for Registration");
         registerobj.clickSubmitButton();
+
 
     }
 

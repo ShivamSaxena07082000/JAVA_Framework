@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="4" parallel="tests">
+    <test verbose="2" preserve-order="true" name="Regression_chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testScripts.RegistrationScripts">
+                <methods>
+                    <include name="registrationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Regression_firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="testScripts.RegistrationScripts">
+                <methods>
+                    <include name="registrationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Regression_edge">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="testScripts.RegistrationScripts">
+                <methods>
+                    <include name="registrationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
